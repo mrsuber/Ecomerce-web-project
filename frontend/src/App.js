@@ -1,6 +1,6 @@
 
 import {commerce} from './lib/commerce';
-import {Products, Navbar} from './components'
+import {Products, Navbar, Cart} from './components'
 import {useState, useEffect} from 'react'
 
 
@@ -23,11 +23,12 @@ function App(){
     fetchCart();
   },[])
 
-console.log(cart)
+// console.log(cart.line_items.length)
   return(
       <div>
           <Navbar totalItems={cart.total_items}/>
-          <Products products={products} onAddToCart={handleAddToCart}/>
+        <Products products={products} onAddToCart={handleAddToCart}/>
+          {/*<Cart cart={cart}/>*/}
       </div>
 
   )
