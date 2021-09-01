@@ -61,7 +61,7 @@ console.log(cartt)
               </Route>
 
               <Route exact path="/checkout">
-                <Checkout />
+                <Checkout cart={cartt}/>
               </Route>
 
 
